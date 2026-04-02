@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Projeto CI/CD</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <h1>🚀 Meu Projeto CI/CD</h1>
+        <p>Construído com Vite + GitHub Actions</p>
+      </header>
+
+      <main class="main">
+        <section class="card">
+          <h2>📋 Contador de Tarefas</h2>
+          <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Digite uma tarefa..." />
+            <button id="addBtn">Adicionar</button>
+          </div>
+          <ul id="taskList" class="task-list"></ul>
+          <div class="task-stats">
+            <span id="totalTasks">0 tarefas</span>
+            <span id="completedTasks">0 concluídas</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>⚙️ Pipeline Status</h2>
+          <div class="pipeline">
+            <div class="pipeline-step active">
+              <span class="step-icon">✅</span>
+              <span>Build</span>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-step active">
+              <span class="step-icon">✅</span>
+              <span>Testes</span>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-step active">
+              <span class="step-icon">✅</span>
+              <span>Deploy</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Deploy automático via GitHub Actions 🤖</p>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
