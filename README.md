@@ -53,3 +53,4 @@ O workflow em `.github/workflows/ci.yml` é ativado em todo `push` e `pull_reque
 ├── vite.config.js
 └── package.json
 ```
+## Status do Pipeline
