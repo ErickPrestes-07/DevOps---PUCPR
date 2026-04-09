@@ -66,4 +66,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: erickprestes07/devops-pucpr:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/devops-pucpr:latest
