@@ -14,6 +14,19 @@ Projeto web simples construído com **Vite + JavaScript** para praticar um fluxo
 - [Vite](https://vitejs.dev/) — build tool
 - [Vitest](https://vitest.dev/) — testes unitários
 - [GitHub Actions](https://github.com/features/actions) — CI/CD
+- [Docker](https://www.docker.com/) — containerização
+- [Ruby](https://www.ruby-lang.org/) — aplicação de exemplo
+
+## 🐳 Docker
+
+O projeto inclui um Dockerfile para uma aplicação Ruby simples usando Sinatra.
+
+Para construir e executar:
+
+```bash
+docker build -t ruby-app .
+docker run -p 4567:4567 ruby-app
+```
 
 ## 🚀 Como rodar localmente
 
