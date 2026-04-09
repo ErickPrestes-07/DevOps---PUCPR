@@ -65,5 +65,10 @@ O workflow em `.github/workflows/ci.yml` é ativado em todo `push` e `pull_reque
 ├── index.html
 ├── vite.config.js
 └── package.json
+
+## Status do Pipeline
+
+- Esta branch adiciona melhorias no workflow de CI/CD e configurações de imagem Docker para publicação no Docker Hub.
+
 ```
 ## Status do Pipeline
