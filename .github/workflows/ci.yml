@@ -74,3 +74,11 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/devops-pucpr:latest
 
+      - name: 📢 Notificação Discord
+        if: always()
+        uses: appleboy/discord-action@master
+        with:
+          webhook_id: ${{ secrets.DISCORD_ID }}
+          webhook_token: ${{ secrets.DISCORD_TOKEN }}
+          message: "🚀 Workflow **${{ github.workflow }}** finalizado!\n**Status:** ${{ job.status }}\n**Branch:** ${{ github.ref_name }}\n**Evento:** ${{ github.event_name }}\n**Commit:** ${{ github.event.head_commit.message }}"
+

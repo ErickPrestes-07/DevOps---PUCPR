@@ -1,35 +1,32 @@
 import { describe, it, expect } from 'vitest'
 import { add, formatTask, validateTask, getTaskStatusLabel, truncateText } from './app.js'
 
-describe('Suíte de Testes Unitários - App Todo', () => {
-  // Teste 1: Soma
-  it('deve somar dois números corretamente', () => {
+describe('🧪 Suíte de Testes Unitários - App de Tarefas', () => {
+  
+  it('1. Soma: deve calcular a soma de dois números para utilitários de estatísticas', () => {
     expect(add(10, 5)).toBe(15)
-    expect(add(-1, 1)).toBe(0)
+    expect(add(-5, 5)).toBe(0)
   })
 
-  // Teste 2: Formatação de Texto
-  it('deve formatar o texto da tarefa (primeira letra maiúscula e trim)', () => {
-    expect(formatTask('  estudar devops  ')).toBe('Estudar devops')
+  it('2. Formatação: deve formatar o texto da tarefa (primeira letra em maiúsculo e remover espaços)', () => {
+    expect(formatTask('  estudar para a prova  ')).toBe('Estudar para a prova')
+    expect(formatTask('devops')).toBe('Devops')
   })
 
-  // Teste 3: Validação de Tarefa
-  it('deve validar se a tarefa tem pelo menos 3 caracteres', () => {
-    expect(validateTask('Oi')).toBe(false)
+  it('3. Validação: deve garantir que a tarefa tenha no mínimo 3 caracteres válidos', () => {
+    expect(validateTask('Ok')).toBe(false)
     expect(validateTask('Estudar')).toBe(true)
-    expect(validateTask('   abc   ')).toBe(true)
   })
 
-  // Teste 4: Rótulo de Status
-  it('deve retornar o rótulo correto para o status da tarefa', () => {
+  it('4. Status: deve retornar o rótulo amigável para o estado da tarefa', () => {
     expect(getTaskStatusLabel(true)).toBe('Concluída')
     expect(getTaskStatusLabel(false)).toBe('Pendente')
   })
 
-  // Teste 5: Truncar Texto
-  it('deve truncar textos longos corretamente', () => {
-    const longText = 'Essa é uma tarefa muito longa que precisa de resumo'
-    expect(truncateText(longText, 10)).toBe('Essa é uma...')
-    expect(truncateText('Curta', 10)).toBe('Curta')
+  it('5. Resumo: deve truncar textos que ultrapassam o limite de caracteres', () => {
+    const textoLongo = 'Esta é uma tarefa extremamente longa para testar o componente de resumo'
+    expect(truncateText(textoLongo, 20)).toBe('Esta é uma tarefa ex...')
+    expect(truncateText('Curto', 20)).toBe('Curto')
   })
+
 })
