@@ -75,3 +75,16 @@ export function add(a, b) {
 export function formatTask(text) {
   return text.trim().charAt(0).toUpperCase() + text.trim().slice(1)
 }
+
+export function validateTask(text) {
+  return text.trim().length >= 3
+}
+
+export function getTaskStatusLabel(done) {
+  return done ? 'Concluída' : 'Pendente'
+}
+
+export function truncateText(text, maxLength) {
+  if (text.length <= maxLength) return text
+  return text.slice(0, maxLength) + '...'
+}
