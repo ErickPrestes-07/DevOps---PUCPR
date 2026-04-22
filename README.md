@@ -48,8 +48,9 @@ npm run build
 
 O workflow em `.github/workflows/ci.yml` é ativado em todo `push` e `pull_request`:
 
-1. **Build & Testes** — instala dependências, roda testes e gera o build
-2. **Deploy** — simulado na branch `main` (pode ser configurado para Vercel/Netlify)
+  1. **Build & Testes** — instala dependências, roda testes e gera o build
+  2. **Deploy** — simulado na branch `main` (pode ser configurado para Vercel/Netlify)
+  3. **Notificações** — Envio de alertas automáticos para o Discord via Webhook.
 
 ## 📁 Estrutura
 
